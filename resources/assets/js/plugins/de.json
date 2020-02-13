@@ -243,6 +243,7 @@
   "general": {
     "action_failed": "Aktion fehlgeschlagen",
     "actions": "Aktionen",
+    "deselect": "Entfernen",
     "add_new_item": "Artikel hinzufügen",
     "all": "Alle",
     "are_you_sure": "Sind Sie sicher?",
@@ -285,19 +286,22 @@
     "select_state": "Bundesland wählen",
     "sent": "Gesendet",
     "setting_updated": "Einstellungen erfolgreich aktualisiert",
-    "ship_to": "Versand ein",
+    "ship_to": "Versand an",
     "showing": "Anzeigen",
     "street_1": "Straße",
     "street_2": "Zusatz Strasse",
     "subtotal": "ZWISCHENSUMME",
     "tax": "Steuer",
-    "to": "bis",
+    "to": "E-Mail Adresse",
     "to_date": "bis Datum",
     "total_amount": "GESAMTSUMME",
     "update": "Update",
     "view": "Anzeigen",
     "view_pdf": "PDF anzeigen",
-    "you_got_lost": "Hoppla! Du hast dich verirrt!"
+    "you_got_lost": "Hoppla! Du hast dich verirrt!",
+    "test_mail_conf": "Test-E-Mail senden",
+    "subject": "Betreff",
+    "message": "Nachricht"
   },
   "invoices": {
     "action": "Aktion",
@@ -313,7 +317,7 @@
     "confirm_send_invoice": "Diese Rechnung wird per E-Mail an den Kunden gesendet",
     "contact": "Kontakt",
     "created_message": "Rechnung erfolgreich erstellt",
-    "customer": "KUNDEN",
+    "customer": "KUNDE",
     "date": "Datum",
     "days": "{days} Tage",
     "deleted_message": "Rechnung erfolgreich gelöscht | Rechnungen erfolgreich gelöscht",
@@ -345,6 +349,7 @@
     "mark_as_sent": "Als gesendet markieren",
     "mark_as_sent_successfully": "Rechnung gekennzeichnet als erfolgreich gesendet",
     "marked_as_sent_message": "Rechnung als erfolgreich gesendet markiert",
+    "clone_invoice": "Rechnung duplizieren",
     "months": "{months} Monat",
     "new_invoice": "Neue Rechnung",
     "no_invoices": "Keine Rechnungen vorhanden!",
@@ -352,7 +357,7 @@
     "notes": "Hinweise",
     "number": "ANZAHL",
     "paid": "Bezahlt",
-    "paid_status": "BEZAHLT-STATUS",
+    "paid_status": "ZAHLUNGSSTATUS",
     "partially_paid": "Teilzahlung",
     "payment_attached_message": "Einer der ausgewählten Rechnungen ist bereits eine Zahlung zugeordnet. Stellen Sie sicher, dass Sie zuerst die angehängten Zahlungen löschen, um mit dem Entfernen fortzufahren",
     "record_payment": "Zahlung erfassen",
@@ -530,11 +535,11 @@
   "settings": {
     "account_settings": {
       "account_settings": "Konto-Einstellungen",
-      "confirm_password": "Kennwort Bestätigen",
-      "email": "E-Mail",
+      "confirm_password": "Passwort bestätigen",
+      "email": "E-Mail Adresse",
       "name": "Name",
       "password": "Passwort",
-      "profile_picture": "Profil Bild",
+      "profile_picture": "Profilbild",
       "save": "Speichern",
       "section_description": "Sie können Ihren Namen, Ihre E-Mail-Adresse und Ihr Passwort mit dem folgenden Formular aktualisieren.",
       "updated_message": "Kontoeinstellungen erfolgreich aktualisiert"
@@ -624,7 +629,9 @@
         "payment_setting_description": "Deaktivieren Sie diese Option, wenn Sie nicht jedes Mal, wenn Sie eine neue Zahlung erstellen, automatisch Zahlungsnummern generieren möchten.",
         "payment_setting_updated": "Zahlungseinstellung erfolgreich aktualisiert",
         "payment_settings": "Zahlung Einstellungen",
-        "title": "Zahlungen"
+        "title": "Zahlungen",
+        "payment_mode": "Zahlungsarten",
+        "add_payment_mode": "Zahlungsart hinzufügen"
       },
       "save": "Speichern",
       "updated_message": "Unternehmensinformationen wurden erfolgreich aktualisiert"
@@ -648,8 +655,8 @@
     "mail": {
       "driver": "E-Mail Treiber",
       "encryption": "E-Mail-Verschlüsselung",
-      "from_mail": "Von E-Mail-Adresse",
-      "from_name": "Von E-Mail-Namen",
+      "from_mail": "Absender-E-Mail-Adresse",
+      "from_name": "Name des Absenders",
       "host": "E-Mail Mailserver",
       "mail_config": "E-Mail-Konfiguration",
       "mail_config_desc": "Unten finden Sie das Formular zum Konfigurieren des E-Mail-Treibers zum Senden von E-Mails über die App. Sie können auch Drittanbieter wie Sendgrid, SES usw. konfigurieren.",
@@ -719,11 +726,11 @@
       "confirm_delete": "Sie können diesen Steuersatz nicht wiederherstellen",
       "created_message": "Steuersatz erfolgreich erstellt",
       "deleted_message": "Steuersatz erfolgreich gelöscht",
-      "description": "Sie können Steuern nach Belieben hinzufügen oder entfernen. Crater unterstützt Steuern auf einzelne Artikel sowie auf die Rechnung.",
+      "description": "Sie können Steuern nach Belieben hinzufügen oder entfernen. Crater unterstützt Steuern auf einzelne Artikel sowie auf die vollständige Rechnung.",
       "percent": "Prozent",
       "tax_name": "Name des Steuersatzes",
       "tax_per_item": "Steuersatz pro Artikel",
-      "tax_setting_description": "Aktivieren Sie diese Option, wenn Sie den Steuersatz zu einzelnen Rechnungspositionen hinzufügen möchten. Standardmäßig wird der Steuersatz direkt zur Rechnung hinzugefügt.",
+      "tax_setting_description": "Aktivieren Sie diese Option, wenn Sie den Steuersatz zu einzelnen Rechnungspositionen hinzufügen möchten. Standardmäßig wird der Steuersatz direkt zur vollständigen Rechnung hinzugefügt.",
       "tax_settings": "Einstellungen Steuersatz",
       "title": "Steuersätze",
       "updated_message": "Steuersatz erfolgreich aktualisiert"
@@ -744,8 +751,8 @@
       "update_success": "App wurde aktualisiert! Bitte warten Sie, während Ihr Browserfenster automatisch neu geladen wird."
     },
     "user_profile": {
-      "confirm_password": "Kennwort bestätigen",
-      "email": "E-Mail",
+      "confirm_password": "Passwort bestätigen",
+      "email": "E-Mail Adresse",
       "name": "Name",
       "password": "Passwort"
     }
@@ -830,8 +837,8 @@
     "mail": {
       "driver": "E-Mail-Treiber",
       "encryption": "E-Mail-Verschlüsselung",
-      "from_mail": "Von E-Mail-Absenderadresse",
-      "from_name": "Von E-Mail-Absendername",
+      "from_mail": "Absender-E-Mail-Adresse",
+      "from_name": "Name des Absenders",
       "host": "E-Mail-Host",
       "mail_config": "E-Mail-Konfiguration",
       "mail_config_desc": "Unten finden Sie das Formular zum Konfigurieren des E-Mail-Treibers zum Senden von E-Mails über die App. Sie können auch Drittanbieter wie Sendgrid, SES usw. konfigurieren.",
